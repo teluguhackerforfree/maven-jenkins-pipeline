@@ -5,6 +5,11 @@ pipeline {
    }
 
   stages {
+      stage('clone repo') {
+            steps {
+              git 'https://github.com/devopseng129/maven-jenkins-pipeline.git'
+            }
+      }
       stage('Build Artifact') {
             steps {
               sh "mvn clean package -DskipTests=true"
