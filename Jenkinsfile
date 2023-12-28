@@ -7,7 +7,7 @@ pipeline {
   stages {
       stage('clone repo') {
             steps {
-              git 'https://github.com/devopseng129/maven-jenkins-pipeline.git'
+              git branch: 'main', url: 'https://github.com/devopseng129/maven-jenkins-pipeline.git'
             }
       }
       stage('Build Artifact') {
